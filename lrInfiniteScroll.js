@@ -31,7 +31,7 @@
                             timeout.cancel(promise);
                         }
                         promise = timeout(function () {
-                            handler();
+                            scope.$eval(attr.lrInfiniteScroll);
                             promise = null;
                         }, timeThreshold);
                     }
